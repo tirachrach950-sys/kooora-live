@@ -1,0 +1,20 @@
+# Render.com blueprint: New > Blueprint > pick your repository.
+# Use a paid always-on instance: free instances go to sleep, which stops live updates and can make Google's crawler see errors.
+services:
+  - type: web
+    name: goalline
+    runtime: node
+    plan: starter
+    buildCommand: echo "nothing to build"
+    startCommand: node server.js
+    healthCheckPath: /healthz
+    envVars:
+      - { key: FOOTBALL_DATA_TOKEN, sync: false }
+      - { key: SITE_URL, sync: false }
+      - { key: SITE_NAME, value: Goalline }
+      - { key: CONTACT_EMAIL, sync: false }
+      - { key: GAP_MS, value: "6500" }
+      - { key: ADSENSE_CLIENT, sync: false }
+      - { key: ADSENSE_PUB, sync: false }
+      - { key: ADSLOT_1, sync: false }
+      - { key: ADSLOT_2, sync: false }

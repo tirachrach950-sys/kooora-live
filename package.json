@@ -1,0 +1,12 @@
+{
+  "name": "goalline",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --env-file=.env server.js",
+    "mock": "MOCK=1 node server.js"
+  },
+  "engines": { "node": ">=20.6" }
+}
